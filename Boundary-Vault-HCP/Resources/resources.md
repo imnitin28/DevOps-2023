@@ -1,0 +1,7 @@
+YT link: https://www.hashicorp.com/events/webinars/passwordless-authentication-with-hcp-boundary-and-vault?mkt_tok=ODQ1LVpMRi0xOTEAAAGI0yUiDupX6dUjeZe81d2fqgsNtrE_TeI2EKMwQDkIdFkNcx2pYqRjPY9E8cB5K2rGu7kbZjyo1cwoT-v_bS4WvlXHnpB4GJDr2ziKhlWys7zVJA
+
+HCP self paced course: https://developer.hashicorp.com/boundary/tutorials?mkt_tok=ODQ1LVpMRi0xOTEAAAGI0yUiDpu70f0rli8VDXd8J_2OuNHez2hMuL_5EjZhqTkm_j_8_-NzJKjLzvTWsoHFYP5u-KfRy85T1-dhQ2s1QMt5Rq0O7yNGgUpbXDFSgvyHRw
+
+Boundary Docs: https://developer.hashicorp.com/boundary/docs?mkt_tok=ODQ1LVpMRi0xOTEAAAGI0yUiDroLanVmae-8-WXhujO8HlmLZlvjeO0h6FfEBFemghwO5lv6jWoEmCuL4m66OSiGS59G_MdQPKMbjVHswhyorLB6tML-dbuEHxAcfh3cvg
+
+Github repo: https://github.com/panchal-ravi/boundary-hackfest?mkt_tok=ODQ1LVpMRi0xOTEAAAGI0yUiDhY3GHfR4JLQjxoD_9Rbrdp0FOQj89HQclkkd40E60-a0Buk4RHSr8rQj1BUCbbsJrGsF1jdCKktz4Q4KQnPAnQlGbqctTM3Ba8KzFUevA
