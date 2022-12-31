@@ -28,6 +28,7 @@ K8s answers all these questions.
 # Summary
 Kubernetes and Docker work together. Docker provides an open standard for packaging and distributing containerised applications. Using Docker, you can build and run containers and store and share container images. One can easily run a Docker build on a Kubernetes cluster, but Kubernetes itself is not a complete solution. To optimise Kubernetes in production, implement additional tools and services to manage security, governance, identity and access along with continuous integration/continuous deployment (CI/CD) workflows and other DevOps practices.
 
+![image](https://user-images.githubusercontent.com/76727343/210156585-b051a6d0-6688-49ef-b1bc-138f28d67a88.png)
 
 
 # References
