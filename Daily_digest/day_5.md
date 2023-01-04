@@ -2,12 +2,6 @@
 - Main Commands
 - Debugging a Container
 
-# Container vs Image
-desc </br>
-
-# Version and Tag
-desc </br>
-
 # Commands
 - docker pull <image-name>:<version>
 - docker images
@@ -57,10 +51,11 @@ CONTAINER ID   IMAGE         COMMAND                  CREATED          STATUS   
 7aed21b051dd   redis:4.0     "docker-entrypoint.s…"   4 seconds ago    Up 3 seconds    0.0.0.0:6000->6379/tcp, :::6000->6379/tcp   naughty_kilby
 ```
 
-# Container Debugging
-- Commands for troubleshooting.
+# Container Debugging Commands
 
-- docker ps
-- docker logs <container_id>
-- docker logs <container_name>
-- docker exec -it <container_id> bash
+```
+docker ps
+docker logs <container_id>
+docker logs <container_name>
+docker exec -it <container_id> bash
+```

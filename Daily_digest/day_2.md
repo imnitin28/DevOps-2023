@@ -1,7 +1,7 @@
 # Microservice Architechture
 
-Before microservice architechure, Monolithic was the standard way of architechtural design.
-In monolithic all components of an appliation are part of single unit.
+Before microservice architechure, Monolithic was the standard way of architechtural design. </br>
+In monolithic all components of an appliation are part of single unit. </br>
 
 ## Image - monolithic arch ##
 - Problems
@@ -17,7 +17,7 @@ In monolithic all components of an appliation are part of single unit.
     - Tightly coupled.
 
 - Microservices solves these problems.
-In microservice architechture based application, the product is breaked into multiple smaller independent services.
+In microservice architechture based application, the product is breaked into multiple smaller independent services. </br>
 
 ### This rises some questions.
 - How to break down the application?

@@ -20,3 +20,14 @@
 - Docker vs Virtual machine
 - Docker Installation
 
+### What is Docker?
+
+#### What is a COntainer?
+
+### Docker vs Virtual Machine
+
+### Docker Installation
+
+### Container vs Image
+
+### Version and Tag
