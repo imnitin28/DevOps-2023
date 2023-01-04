@@ -42,9 +42,9 @@ This brings up Container Port vs Host Port. </br>
 
 # Container Port vs Host Port
 We need to bind container port to host port(laptop) in order to access container. </br>
-
-# Image
+![image](https://user-images.githubusercontent.com/76727343/210501977-74a4e737-47ed-4657-839a-7ac81357d66b.png)
 
 To bind we use command, </br>
 ``` docker run -p<host-port>:<container-port> <image-name> ```
+
 
