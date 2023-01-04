@@ -46,5 +46,21 @@ We need to bind container port to host port(laptop) in order to access container
 
 To bind we use command, </br>
 ``` docker run -p<host-port>:<container-port> <image-name> ```
+e.g: ```docker run -p6000:6739 redis:latest```
 
+#### Output
+```
+knoldus@knoldus-Latitude-3510:~$ docker run -p6000:6379 -d redis:4.0
+7aed21b051ddb14f0cff9ef91b5e4ae931173f8b06554b4734a8d422dfafdf73
+knoldus@knoldus-Latitude-3510:~$ docker ps
+CONTAINER ID   IMAGE         COMMAND                  CREATED          STATUS          PORTS                                       NAMES
+7aed21b051dd   redis:4.0     "docker-entrypoint.s…"   4 seconds ago    Up 3 seconds    0.0.0.0:6000->6379/tcp, :::6000->6379/tcp   naughty_kilby
+```
 
+# Container Debugging
+- Commands for troubleshooting.
+
+- docker ps
+- docker logs <container_id>
+- docker logs <container_name>
+- docker exec -it <container_id> bash
