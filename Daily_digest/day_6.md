@@ -48,3 +48,5 @@ knoldus@knoldus-Latitude-3510:~$ docker run -d -p 8081:8081 -e ME_CONFIG_MONGODB
 
 ## Connect NodeJS Server with MongoDB Container
 
+We have mongodb and mongoexpress containers running. Now we want to connect nodeJS with the database. So the way to do this is to give a protocal of the database and the URI. uri for the mongodb database would be localhost:27017. This configuration is done in Docker/Demo_project/app/server.js.
+
