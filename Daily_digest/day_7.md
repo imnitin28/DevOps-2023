@@ -35,4 +35,25 @@ services:       => (*) - list of services needed
             ...
 ```
 
-NOTE: Docker compose takes care of creating a common network
+NOTE: Docker compose takes care of creating a common network.
+Running a docker compose file,
+```
+docker-compose -f <file_name>.yml up
+``` 
+To see docker network created by docker compose run,
+```
+docker network ls
+Output:
+15ea12553dc5   writingadockercompose_default                     bridge    local
+```
+Note that, by default there is no data persistance with Containers.
+
+Docker Volumes is a concept which is helpful for having persistency while working with containers.
+
+Stopping containers, removes network as well:
+```
+knoldus@knoldus-Latitude-3510:~/DevOps/DevOps-2023/Docker/Writing_a_docker_compose$ docker-compose -f mongo.yml down
+Removing writingadockercompose_mongodb_1       ... done
+Removing writingadockercompose_mongo-express_1 ... done
+Removing network writingadockercompose_default
+``` 

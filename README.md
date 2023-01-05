@@ -19,20 +19,22 @@
 - Adherence to the quality process defined for the project
 - Adherence to the operational process defined for the company
 - Continuous updation of technical knowledge and skills by attending in-house and/or external courses, reading manuals, accessing new applications and investigating new technologies
-- Problem-solving and thinking laterally as part of a team, or individually, to meet the needs of the project
-- Enhancing and maintaining work culture & environment
+- Problem-solving and thinking laterally as part of a team, or individually, to meet the needs of the project.
  
 #### Technical:
 - DevOps, CI/CD, Ansible, Docker, Kubernetes, Linux, Bash & python Scripting etc.
 - Experience in scripting like Bash/Python scripts.
 - Experience with OS & Orchestration Docker & Kubernetes.
 - Experience in Configuration Management tools like Ansible automation, Jinja templating etc.
-- Infrastructure as a code tool like Terraform is required.
-- Working Knowledge of Helm charts, EKS etc
+- Iac
+    - Terraform.
+- Working Knowledge of Helm charts, EKS/GKE etc.
 - Knowledge of Argo CD / Argo workflow will be an added advantage.
 - Deployment experience via tools like Jenkins/Teamcity.
-- Prometheus, Grafana related monitoring skills.
- 
+- Monitoring and Logging
+    - Prometheus
+    - Grafana
+    - ELK Stack
  
 #### Certifications
 - GCP
