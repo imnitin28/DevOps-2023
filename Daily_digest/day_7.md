@@ -6,9 +6,9 @@ In an enterprise world we have multiple environments,
 - prod
 
 For setting up application environment, we need to have multiple docker containers that supports together to result a fully functional application.
-In order to have multiple containers together, running each one by one from terminal is a very tidious and repetative task.
+In order to have multiple containers together, running each one by one from terminal is a very tidious and repetative task. </br>
 
-Docker compose is a solution which helps to run multiple containers with all needed configuration at the same time.
+Docker compose is a solution which helps to run multiple containers with all needed configuration at the same time. </br>
 
 #### Understanding a docker compose file
 
@@ -35,22 +35,22 @@ services:       => (*) - list of services needed
             ...
 ```
 
-NOTE: Docker compose takes care of creating a common network.
-Running a docker compose file,
+NOTE: Docker compose takes care of creating a common network. </br>
+Running a docker compose file, </br>
 ```
 docker-compose -f <file_name>.yml up
 ``` 
-To see docker network created by docker compose run,
+To see docker network created by docker compose run, </br>
 ```
 docker network ls
 Output:
 15ea12553dc5   writingadockercompose_default                     bridge    local
 ```
-Note that, by default there is no data persistance with Containers.
+Note that, by default there is no data persistance with Containers.</br>
 
-Docker Volumes is a concept which is helpful for having persistency while working with containers.
+Docker Volumes is a concept which is helpful for having persistency while working with containers.</br>
 
-Stopping containers, removes network as well:
+Stopping containers, removes network as well: </br>
 ```
 knoldus@knoldus-Latitude-3510:~/DevOps/DevOps-2023/Docker/Writing_a_docker_compose$ docker-compose -f mongo.yml down
 Removing writingadockercompose_mongodb_1       ... done
