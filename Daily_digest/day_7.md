@@ -11,7 +11,7 @@ In order to have multiple containers together, running each one by one from term
 Docker compose is a solution which helps to run multiple containers with all needed configuration at the same time. </br>
 
 #### Understanding a docker compose file
-
+docker-compose file example: https://github.com/imnitin28/DevOps-2023/tree/master/Docker/Writing_a_docker_compose
 ```
 version: '3'    => (*) - version of docker-compose
 services:       => (*) - list of services needed
