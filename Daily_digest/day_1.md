@@ -1,33 +1,85 @@
-# Docker vs K8s
-Either/or is completely wrong question here. Docker and K8s work better together. </br>
-Docker(a containerisation tool) is useful for automated deployment of applications which can run on cloud or cloud premise.</br>
+# Microservice Architechture
 
-Docker allows to build images of applications and push to container registry which can later be used to create multiple containers on multiple servers.</br>
+Before microservice architechure, Monolithic was the standard way of architechtural design. </br>
+In monolithic all components of an appliation are part of single unit. </br>
 
-As product demand grows, load increases we need to deploy multiple containers across multiple servers. This brings some challenges as well, like- </br>
-- How to schedule containers based on load?
-- How do different containers talk to each other?
-- How to scale up container instances?
+## Image - monolithic arch ##
+- Problems
+    - everything is developed, deployed and scaled as single unit.
+    - app is developed in single tech stack. If Java only Java.
+    - Collaboration b/w team members was difficult.
+    - single artifact, means on each update whole application needs to be redeployed.
+    - higher infra cost. 
+    - scale up/down was difficult.
+    - Difficulty if services need different dependency version.
+    - release process was slow.
+    - bug in single module can affect entire application.
+    - Tightly coupled.
 
-#### K8s answers all these questions.
+- Microservices solves these problems.
+In microservice architechture based application, the product is breaked into multiple smaller independent services. </br>
 
-- K8s is an containers orchestration tool.
-- It provides an API to control how and where those containers will run. 
-- K8s helps to easily tackle operational complexities when we scale up/down multiple containers deployed across multiple servers.
-- Kubernetes lets us to orchestrate a cluster of virtual machines and schedule containers to run on those virtual machines based on their available compute resources and the resource requirements of each container. 
-- Containers are grouped into pods, the basic operational unit for Kubernetes. These containers and pods can be scaled to your desired state and you are able to manage their lifecycle to keep your apps up and running.
-- Containers run on the principle of "code once and run anywhere".
-- K8s provides potential to orchestrate and manage all container resources from control plane. It includes networking, LB, security, scaling across all K8s nodes.
-- K8s also provides namespaces for isolation mechanism.
-- In short, use Kubernetes with Docker to:
+### This rises some questions.
+- How to break down the application?
+- What code goes where?
+- How many services do we create?
+- How big/small should each service be?
+- How do each service communicate?
+-----------------
+### Answers
+- Split application based on business fucntionalities and not on technical basis.
+- Each service should do one specific job. each service should be self-contained and independent.
+- Each microservice should be able to developed, deployed and scaled separately.
+- Each microservice has their own versions.
+- They communicate via API call, each service have their own endpoint.
 
-    - Make infrastructure more robust and highly available application. App will remain online, even if some of the nodes go offline.
-    - Make application more scalable. If your app starts to get a lot more load and you need to scale out to be able to provide a better user experience, it is simple to spin up more containers or add more nodes to your Kubernetes cluster.
+# Synchronous communication
+- One service sends request to other service and wait for response. 
+- One microservice sends http request to other microservice on its endpoint and vice-versa.
+## Image ##
 
-# Summary
-Kubernetes and Docker work together. Docker provides an open standard for packaging and distributing containerised applications. Using Docker, you can build and run containers and store and share container images. One can easily run a Docker build on a Kubernetes cluster, but Kubernetes itself is not a complete solution. To optimise Kubernetes in production, implement additional tools and services to manage security, governance, identity and access along with continuous integration/continuous deployment (CI/CD) workflows and other DevOps practices. </br>
+# Asynchronous communication
+Communicate via messages via message broker. for e.g RabbitMQ
+Here, services will send message first to a message broker and then the message broker forwards that message to the respective service.
+## Image ##
 
-![image](https://user-images.githubusercontent.com/76727343/210156585-b051a6d0-6688-49ef-b1bc-138f28d67a88.png)
+# Service Mesh with Sidecar pattern
+In field of K8s, with service mesh we have a kind of helper service that takes over the complete communication logic, so we don't need to code this logic to microservice and delegate this logic to external service.
+## Image ##
+------------------
+
+- Each microservice have different team, each team can choose their own tech stack.
+
+# Challenges with Microservices
+- Configuring communication b/w services in a challenge.
+- Monitoring becomes difficult for each microservice.
+
+#### Various tools to overcome these challenges
+1. Kubernetes
+Platform for running large microservices app.
+
+2. Hashicorp stacks
+- Terraform
+- Vault
+- Service Mesh-Consul
+etc.
+
+#### CI/CD Pipeline for microservice
+- Release process with CICD for microservice.
+
+#### Monorepo vs Polyrepo
+- How do we manage repositories for microservices?
+
+1. Monorepo
+All microservices are kept in a single repo in different folders.
+This make code management easier. But problem is tight coupling.
+Large repo size.
+Pipelining requires more logic.
+
+2. Polyrepo
+Separate git project for each microservice.
+User grouping feature of Gitlab/Guthub for linking.
+CICD-> different pipeline for each repo.
 
 # References
-- https://azure.microsoft.com/en-in/solutions/kubernetes-vs-docker/
+- https://www.youtube.com/watch?v=rv4LlmLmVWk

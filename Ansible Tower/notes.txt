@@ -1,0 +1,2 @@
+CI with jenkins for CD we can have steps defined in jenkins as well. But what in case an organisation wants otehr tool.
+No deployment setup. doing things manually. dependency. What if dependent prson is unavailable?
