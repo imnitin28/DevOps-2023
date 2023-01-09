@@ -1,10 +1,10 @@
-## Prerequisite
+# Prerequisite
 - GCP account
 - Container Registry API enabled
 
 ### Pushing a  docker image to gcr
 #### Step 1: 
-
+Configure GCP Account with gcloud cli </br>
 ```
 gcloud auth login
 gcloud config set project <PROJECT_ID>
@@ -57,7 +57,7 @@ ded7a220bb05: Layer already exists
         - Pushed image with gcp tagname would be visible there.
 ![image](https://user-images.githubusercontent.com/76727343/211279385-c017ded5-3ac7-456f-9d5a-edd1804cb25e.png)
 
-### Pulling a docker image from gcr
+##### Pulling a docker image from gcr
 Before Pulling make sure image is already not present.
 Run ``` docker images ``` to list and Run ``` docker rmi <IMAGE-ID> ``` to delete. </br>
 
@@ -65,16 +65,16 @@ Run ``` docker pull gcr.io/grounded-region-366110/nodeapp:4.0 ``` to pull the im
 
 Run ``` docker rum <IMAGE-ID> ``` to start the container of the image.</br>
 
-### Explore GCR Options
-![image](https://user-images.githubusercontent.com/76727343/211280509-bb88c71a-690a-4022-be3d-7290e2ce44eb.png)
+## Explore GCR Options
+- ![image](https://user-images.githubusercontent.com/76727343/211280509-bb88c71a-690a-4022-be3d-7290e2ce44eb.png)
 
 - Overview
-    ![image](https://user-images.githubusercontent.com/76727343/211280695-be1f737d-5e6b-4420-84ef-fddb10272bd4.png)
+    - ![image](https://user-images.githubusercontent.com/76727343/211280695-be1f737d-5e6b-4420-84ef-fddb10272bd4.png)
 - Pull
-    ![image](https://user-images.githubusercontent.com/76727343/211280735-1c033d9d-fab0-4278-9531-a93e40259f8e.png)
+    - ![image](https://user-images.githubusercontent.com/76727343/211280735-1c033d9d-fab0-4278-9531-a93e40259f8e.png)
 - Manifest
-    ![image](https://user-images.githubusercontent.com/76727343/211280828-fc2383aa-ab42-4325-b553-818b1c374c1e.png)
+    - ![image](https://user-images.githubusercontent.com/76727343/211280828-fc2383aa-ab42-4325-b553-818b1c374c1e.png)
 - Deploy
-    ![image](https://user-images.githubusercontent.com/76727343/211280910-82160d8d-37a3-4d00-906b-1fe9c82716d1.png)
+    - ![image](https://user-images.githubusercontent.com/76727343/211280910-82160d8d-37a3-4d00-906b-1fe9c82716d1.png)
 - Settings
-    ![image](https://user-images.githubusercontent.com/76727343/211281022-2946ed2f-08f7-4bc0-8ad2-4287b22e5d33.png)
+    - ![image](https://user-images.githubusercontent.com/76727343/211281022-2946ed2f-08f7-4bc0-8ad2-4287b22e5d33.png)
