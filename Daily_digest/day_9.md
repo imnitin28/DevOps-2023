@@ -9,6 +9,5 @@ Google Container Registry provides secure, private Docker repository storage on 
 ```
 
 Quickstart to gcr -> https://cloud.google.com/container-registry/docs/quickstart
-###### Step 1: Create a private docker repository on GCP
-- Log on to GCP
-    - Hover to GCP Service GCR
+###### Follow Steps defined here,
+- https://github.com/imnitin28/DevOps-2023/blob/master/GCP/GCR/Quickstart.md
