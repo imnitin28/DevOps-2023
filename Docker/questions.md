@@ -35,8 +35,8 @@ Q. Functionality of COPY command in Dockerfile.
 Q. Copy from desktop to container?</br>
 Q. What are multistage dockerfile?</br>
 Q. What is a Docker registry?</br> 
-Q. Examples of private container registry?</br> [Prepare a recording of doing this] {assignment}
-Q. What is port farwarding?</br>
+Q. Examples of private container registry?[Prepare a recording of doing this] {assignment} </br>
+Q. What is port forwarding?</br>
 Q. namespaces vs cgroups?</br>
 Q. What is ``` docker stats ```? When to use? 
 Q. When to use VM vs When to use  Container?</br>
