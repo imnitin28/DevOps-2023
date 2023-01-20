@@ -1,5 +1,5 @@
 ## Docker Storage Options
-<image>
+![image](https://user-images.githubusercontent.com/76727343/213815465-28a89fa0-6075-4347-b2b0-8b5a10130e03.png)
 
 - Volumes
 - bind mounts
@@ -28,7 +28,6 @@ This is where we need docker volumes.
 ### How does Docker Volume works?
 When we create a volume, it is stored within a directory on the Docker host. 
 When we mount the volume into a container, this directory is what is mounted into the container. This is similar to the way that bind mounts work, except that volumes are managed by Docker and are isolated from the core functionality of the host machine.
-
 
 On a host we have a physical file system. And the containers runs on the host.
 
