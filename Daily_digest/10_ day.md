@@ -5,7 +5,7 @@
 - bind mounts
 - tmpfs
 
-1. Persisting Data with Volumes.
+#### 1. Persisting Data with Volumes.
 ```
 - When do we need Docker Volumes?
 - What is Docker Volumes?
