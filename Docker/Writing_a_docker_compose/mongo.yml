@@ -1,5 +1,9 @@
 version: '3'
 services:
+    my-app:
+        image: <image-url-from-private-regustry(GCR)>
+        ports:
+            - 3000:3000
     mongodb:   
         image: mongo
         ports:
