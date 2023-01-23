@@ -65,9 +65,9 @@ web-app                                           1.0         1cbc02533102   24 
 ```
 knoldus@knoldus-Latitude-3510:~$ docker inspect 50a8e98742d7 | grep "IPAddress" 
 ```
-Grab IPAddress from here and run,
-on browser ```<IP_Address>:3000```
-See output: 
+Grab IPAddress from here and run, On browser ```<IP_Address>:3000```
+See output: </br>
+![image](https://user-images.githubusercontent.com/76727343/213996564-c27795ca-4d84-48f4-99fa-ea862110ac9a.png)
 
 #### Reducing Docker Image Size
 https://dev.to/kitarp29/reducing-docker-image-size-a67
