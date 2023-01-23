@@ -48,3 +48,4 @@ Q. Non docker workloads?</br>
 Q. What is Swarm?</br>
 Q. attach vs exec?</br>
 Q. What are i/p, o/p and error stream?</br>
+Q. Difference between Dockerfile and docker-compose file?

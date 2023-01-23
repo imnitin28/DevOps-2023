@@ -31,11 +31,11 @@ Ex: COPY can be used when we want to copy a file from host to container.
 Q. What is the difference between RUN and CMD?
 Ans. CMD is the entry point command. We can have multiple RUN but single CMD. CMD directs docker that this is the command which I want to execute as the entrypoint.
 
-#### Creating a Docker Image 
+#### Creating an application's Docker Image 
 Once we have a Dockerfile created, run this command
 ```
 docker build -t <Imagename>:<version> <path_to_dockerfile>
-docker build -t my-app:1.0 .
+docker build -t web-app:1.0 .
 Sending build context to Docker daemon  10.24kB
 Step 1/5 : FROM node:18-alpine
  ---> 6d7b7852bcd3
@@ -52,14 +52,22 @@ Step 5/5 : CMD ["node", "server.js"]
 Removing intermediate container 8d376fe5ba14
  ---> 1cbc02533102
 Successfully built 1cbc02533102
-Successfully tagged my-app:1.0
+Successfully tagged web-app:1.0
 ```
 #### Verfiy if image is created
 ```
 knoldus@knoldus-Latitude-3510:~/DevOps/DevOps-2023/Docker/Demo_Project/app$ docker images
 REPOSITORY                                       TAG         IMAGE ID       CREATED          SIZE
-my-app                                           1.0         1cbc02533102   24 seconds ago   169MB
+web-app                                           1.0         1cbc02533102   24 seconds ago   169MB
 ```
+
+#### Run web-app application on container's IP
+```
+knoldus@knoldus-Latitude-3510:~$ docker inspect 50a8e98742d7 | grep "IPAddress" 
+```
+Grab IPAddress from here and run,
+on browser ```<IP_Address>:3000```
+See output: 
 
 #### Reducing Docker Image Size
 https://dev.to/kitarp29/reducing-docker-image-size-a67
