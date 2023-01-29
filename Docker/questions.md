@@ -1,5 +1,10 @@
 ### Questions on Docker.
 Q. What are microservices? Why do we need it? Adv and Disadvantages. </br>
+***Answer:-Microservices are an architectural and organizational approach to software development where software is split into smaller , independent services.
+Its advantage include **flexible scaling, easy development ,reusable code,resilience** .</br>
+Its disadvantages include  
+- dificult in configuring the communication between services
+- More dificult to monitor with multiple instances of each services distributed across  servers  </br>
 Q. Why do we need docker? What are the usecases?</br>
 Q. How to check docker status?</br>
 Q. Docker runs as a service or what?</br>
