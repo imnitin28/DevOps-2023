@@ -1,0 +1,495 @@
+Host github.com
+  HostName ssh.github.com
+  User git
+  IdentityFile ~/.ssh/id_rsa_hrsd
+  IdentityFile ~/.ssh/id_rsa
+  Port 443
+  IdentitiesOnly yes
+
+Host bastion-integ-mia
+  Hostname bastion-0.mia.ucloud.int
+  User rsircar
+  ForwardAgent no
+  IdentityFile ~/.ssh/id_rsa
+
+Host bastion-integ-qualif
+  Hostname bastion.qualif.people-doc.com
+  User rsircar
+  ForwardAgent no
+  IdentityFile ~/.ssh/id_rsa  
+
+Host bastion-integ-stg-eu
+  Hostname staging-eu-bastion.staging.eu.people-doc.com
+  User rsircar
+  ForwardAgent no
+  IdentityFile ~/.ssh/id_rsa   
+
+Host bastion-integ-stg-us
+  Hostname bastion-staging-us.staging.us.people-doc.com
+  User rsircar
+  ForwardAgent no
+  IdentityFile ~/.ssh/id_rsa    
+
+Host bastion-integ-prod-eu
+  Hostname bastion.de.people-doc.org
+  User rsircar
+  ForwardAgent no
+  IdentityFile ~/.ssh/id_rsa  
+
+Host bastion-integ-prod-us
+  Hostname bastion-4a2038a7.us.people-doc.org
+  User rsircar
+  ForwardAgent no
+  IdentityFile ~/.ssh/id_rsa    
+
+Host bastion-integ-prod-atl
+  Hostname bastion-0.atl.ucloud.int
+  User rsircar
+  ForwardAgent no
+  IdentityFile ~/.ssh/id_rsa    
+
+Host bastion-integ-prod-tor
+  Hostname bastion-0.tor.ucloud.int
+  User rsircar
+  ForwardAgent no
+  IdentityFile ~/.ssh/id_rsa    
+
+Host peoplecare-0.mia.ucloud.int
+  User rsircar
+  Hostname peoplecare-0.mia.ucloud.int
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-mia "nc -w 5 -q0 %h %p"
+
+Host bastion.qualif.people-doc.com
+  User rsircar
+  Hostname bastion.qualif.people-doc.com
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-mia "nc -w 5 -q0 %h %p"
+
+Host peoplecare-1.mia.ucloud.int
+  User rsircar
+  Hostname peoplecare-1.mia.ucloud.int
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-mia "nc -w 5 -q0 %h %p"
+
+Host peoplecare-0.qualif.people-doc.net
+  User rsircar
+  Hostname peoplecare-0.qualif.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-qualif "nc -w 5 -q0 %h %p" 
+
+Host peoplecare-1.qualif.people-doc.net
+  User rsircar
+  Hostname peoplecare-1.qualif.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-qualif "nc -w 5 -q0 %h %p"
+
+Host lb-int-0.qualif.people-doc.net
+  User rsircar
+  Hostname lb-int-0.qualif.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-qualif "nc -w 5 -q0 %h %p" 
+
+Host staging-peoplecare-0.staging.eu.people-doc.net
+  User rsircar
+  Hostname staging-peoplecare-0.staging.eu.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-stg-eu "nc -w 5 -q0 %h %p" 
+
+Host staging-peoplecare-1.staging.eu.people-doc.net
+  User rsircar
+  Hostname staging-peoplecare-1.staging.eu.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-stg-eu "nc -w 5 -q0 %h %p"   
+
+Host staging-lb-int-0.staging.eu.people-doc.net
+  User rsircar
+  Hostname staging-lb-int-0.staging.eu.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-stg-eu "nc -w 5 -q0 %h %p"
+
+Host peoplecare-0.staging.us.people-doc.net
+  User rsircar
+  Hostname peoplecare-0.staging.us.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-stg-us "nc -w 5 -q0 %h %p" 
+
+Host peoplecare-1.staging.us.people-doc.net
+  User rsircar
+  Hostname peoplecare-1.staging.us.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-stg-us "nc -w 5 -q0 %h %p"   
+
+Host lb-int-0.staging.us.people-doc.net
+  User rsircar
+  Hostname lb-int-0.staging.us.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-stg-us "nc -w 5 -q0 %h %p"        
+
+Host peoplecare-0.de.people-doc.net
+  User rsircar
+  Hostname peoplecare-0.de.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-prod-eu "nc -w 5 -q0 %h %p"  
+
+Host peoplecare-1.de.people-doc.net
+  User rsircar
+  Hostname peoplecare-1.de.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-prod-eu "nc -w 5 -q0 %h %p"    
+
+Host lb-int-0.de.people-doc.net
+  User rsircar
+  Hostname lb-int-0.de.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-prod-eu "nc -w 5 -q0 %h %p"  
+
+Host lb-int-1.de.people-doc.net
+  User rsircar
+  Hostname lb-int-1.de.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-prod-eu "nc -w 5 -q0 %h %p" 
+
+Host peoplecare-000.us.people-doc.net
+  User rsircar
+  Hostname peoplecare-000.us.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-prod-us "nc -w 5 -q0 %h %p"  
+
+Host peoplecare-001.us.people-doc.net
+  User rsircar
+  Hostname peoplecare-001.us.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-prod-us "nc -w 5 -q0 %h %p"    
+
+Host lb-int-000.us.people-doc.net
+  User rsircar
+  Hostname lb-int-000.us.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-prod-us "nc -w 5 -q0 %h %p"  
+
+Host lb-int-001.us.people-doc.net
+  User rsircar
+  Hostname lb-int-001.us.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-prod-us "nc -w 5 -q0 %h %p"    
+
+Host peoplecare-0.atl.ucloud.int
+  User rsircar
+  Hostname peoplecare-0.atl.ucloud.int
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-prod-atl "nc -w 5 -q0 %h %p"
+
+Host peoplecare-1.atl.ucloud.int
+  User rsircar
+  Hostname peoplecare-1.atl.ucloud.int
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-prod-atl "nc -w 5 -q0 %h %p"  
+
+Host lb-int-0.atl.ucloud.int
+  User rsircar
+  Hostname lb-int-0.atl.ucloud.int
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-mia "nc -w 5 -q0 %h %p"
+
+Host lb-int-1.atl.ucloud.int
+  User rsircar
+  Hostname lb-int-1.atl.ucloud.int
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-mia "nc -w 5 -q0 %h %p"    
+
+Host peoplecare-0.tor.ucloud.int
+  User rsircar
+  Hostname peoplecare-0.tor.ucloud.int
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-prod-tor "nc -w 5 -q0 %h %p"  
+
+Host peoplecare-1.tor.ucloud.int
+  User rsircar
+  Hostname peoplecare-1.tor.ucloud.int
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-prod-tor "nc -w 5 -q0 %h %p"   
+
+Host lb-int-0.tor.ucloud.int
+  User rsircar
+  Hostname lb-int-0.tor.ucloud.int
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-prod-tor "nc -w 5 -q0 %h %p"  
+
+Host lb-int-1.tor.ucloud.int
+  User rsircar
+  Hostname lb-int-1.tor.ucloud.int
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-prod-tor "nc -w 5 -q0 %h %p" 
+  
+Host synapps-0.mia.ucloud.int
+  User rsircar
+  Hostname synapps-0.mia.ucloud.int
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-mia "nc -w 5 -q0 %h %p"   
+
+Host synapps-1.mia.ucloud.int
+  User rsircar
+  Hostname synapps-1.mia.ucloud.int
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-mia "nc -w 5 -q0 %h %p" 
+
+Host triggers-0.mia.ucloud.int
+  User rsircar
+  Hostname triggers-0.mia.ucloud.int
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-mia "nc -w 5 -q0 %h %p"   
+
+Host triggers-1.mia.ucloud.int
+  User rsircar
+  Hostname triggers-1.mia.ucloud.int
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-mia "nc -w 5 -q0 %h %p" 
+
+Host qualif-synapps-0.qualif.people-doc.net
+  User rsircar
+  Hostname qualif-synapps-0.qualif.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-qualif "nc -w 5 -q0 %h %p"   
+
+Host qualif-synapps-1.qualif.people-doc.net
+  User rsircar
+  Hostname qualif-synapps-1.qualif.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-qualif "nc -w 5 -q0 %h %p"
+
+Host qualif-triggers-0.qualif.people-doc.net
+  User rsircar
+  Hostname qualif-triggers-0.qualif.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-qualif "nc -w 5 -q0 %h %p"
+
+Host qualif-triggers-1.qualif.people-doc.net
+  User rsircar
+  Hostname qualif-triggers-1.qualif.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-qualif "nc -w 5 -q0 %h %p"      
+
+Host lb-int-0.qualif.people-doc.net
+  User rsircar
+  Hostname lb-int-0.qualif.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-qualif "nc -w 5 -q0 %h %p"    
+
+Host staging-synapps-0.staging.eu.people-doc.net
+  User rsircar
+  Hostname staging-synapps-0.staging.eu.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-stg-eu "nc -w 5 -q0 %h %p"   
+
+Host staging-synapps-1.staging.eu.people-doc.net
+  User rsircar
+  Hostname staging-synapps-1.staging.eu.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-stg-eu "nc -w 5 -q0 %h %p"
+
+Host staging-triggers-0.staging.eu.people-doc.net
+  User rsircar
+  Hostname staging-triggers-0.staging.eu.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-stg-eu "nc -w 5 -q0 %h %p"   
+
+Host staging-triggers-1.staging.eu.people-doc.net
+  User rsircar
+  Hostname staging-triggers-1.staging.eu.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-stg-eu "nc -w 5 -q0 %h %p"
+
+Host staging-lb-int-0.staging.eu.people-doc.net
+  User rsircar
+  Hostname staging-lb-int-0.staging.eu.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-stg-eu "nc -w 5 -q0 %h %p"   
+
+Host staging-us-synapps-1.staging.us.people-doc.net
+  User rsircar
+  Hostname staging-us-synapps-1.staging.us.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-stg-us "nc -w 5 -q0 %h %p"   
+
+Host staging-us-synapps-2.staging.us.people-doc.net
+  User rsircar
+  Hostname staging-us-synapps-2.staging.us.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-stg-us "nc -w 5 -q0 %h %p"
+
+Host staging-triggers-1.staging.us.people-doc.net
+  User rsircar
+  Hostname staging-triggers-1.staging.us.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-stg-us "nc -w 5 -q0 %h %p"   
+
+Host staging-triggers-2.staging.us.people-doc.net
+  User rsircar
+  Hostname staging-triggers-2.staging.us.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-stg-us "nc -w 5 -q0 %h %p"
+
+Host lb-int-0.staging.us.people-doc.net
+  User rsircar
+  Hostname lb-int-0.staging.us.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-stg-us "nc -w 5 -q0 %h %p"
+
+Host synapps-0.de.people-doc.net
+  User rsircar
+  Hostname synapps-0.de.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-prod-eu "nc -w 5 -q0 %h %p"   
+
+Host synapps-1.de.people-doc.net
+  User rsircar
+  Hostname synapps-1.de.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-prod-eu "nc -w 5 -q0 %h %p"
+  
+Host synapps-2.de.people-doc.net
+  User rsircar
+  Hostname synapps-2.de.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-prod-eu "nc -w 5 -q0 %h %p"   
+
+Host synapps-3.de.people-doc.net
+  User rsircar
+  Hostname synapps-3.de.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-prod-eu "nc -w 5 -q0 %h %p"   
+
+Host lb-int-0.de.people-doc.net
+  User rsircar
+  Hostname lb-int-0.de.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-prod-eu "nc -w 5 -q0 %h %p"   
+
+Host lb-int-1.de.people-doc.net
+  User rsircar
+  Hostname lb-int-1.de.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-prod-eu "nc -w 5 -q0 %h %p"   
+
+Host synapps-000.us.people-doc.net
+  User rsircar
+  Hostname synapps-000.us.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-prod-us "nc -w 5 -q0 %h %p"   
+
+Host synapps-001.us.people-doc.net
+  User rsircar
+  Hostname synapps-001.us.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-prod-us "nc -w 5 -q0 %h %p"     
+
+Host lb-int-000.us.people-doc.net
+  User rsircar
+  Hostname lb-int-000.us.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-prod-us "nc -w 5 -q0 %h %p"   
+
+Host lb-int-001.us.people-doc.net
+  User rsircar
+  Hostname lb-int-001.us.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-prod-us "nc -w 5 -q0 %h %p"  
+
+Host synapps-0.atl.ucloud.int
+  User rsircar
+  Hostname synapps-0.atl.ucloud.int
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-mia "nc -w 5 -q0 %h %p"   
+
+Host synapps-1.atl.ucloud.int
+  User rsircar
+  Hostname synapps-1.atl.ucloud.int
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-mia "nc -w 5 -q0 %h %p"    
+
+Host lb-int-0.atl.ucloud.int
+  User rsircar
+  Hostname lb-int-0.atl.ucloud.int
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-mia "nc -w 5 -q0 %h %p"   
+
+Host lb-int-1.atl.ucloud.int
+  User rsircar
+  Hostname lb-int-1.atl.ucloud.int
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-mia "nc -w 5 -q0 %h %p"  
+
+Host synapps-0.tor.ucloud.int
+  User rsircar
+  Hostname synapps-0.tor.ucloud.int
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-mia "nc -w 5 -q0 %h %p"   
+
+Host synapps-1.tor.ucloud.int
+  User rsircar
+  Hostname synapps-1.tor.ucloud.int
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-mia "nc -w 5 -q0 %h %p"    
+
+Host lb-int-0.tor.ucloud.int
+  User rsircar
+  Hostname lb-int-0.tor.ucloud.int
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-mia "nc -w 5 -q0 %h %p"   
+
+Host lb-int-1.tor.ucloud.int
+  User rsircar
+  Hostname lb-int-1.tor.ucloud.int
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-mia "nc -w 5 -q0 %h %p" 
+
+Host qualif-mailcast-0
+  User rsircar
+  Hostname mailcast-0.qualif.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-qualif "nc -w 5 -q0 %h %p"  
+
+
+Host lb-int-0.qualif.people-doc.net
+  User rsircar
+  Hostname lb-int-0.qualif.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-qualif "nc -w 5 -q0 %h %p"   
+
+
+Host staging-eu-mailcast-0
+  User rsircar
+  Hostname staging-mailcast-0.staging.eu.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-stg-eu "nc -w 5 -q0 %h %p"
+
+Host staging-lb-int-0.staging.eu.people-doc.net
+  User rsircar
+  Hostname staging-lb-int-0.staging.eu.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-stg-eu "nc -w 5 -q0 %h %p" 
+
+Host staging-eu-mailcast-1
+  User rsircar
+  Hostname staging-mailcast-1.staging.eu.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-stg-eu "nc -w 5 -q0 %h %p"
+
+Host staging-lb-int-1.staging.eu.people-doc.net
+  User rsircar
+  Hostname staging-lb-int-1.staging.eu.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-stg-eu "nc -w 5 -q0 %h %p" 
+
+Host prod-eu-mailcast-0
+  User rsircar
+  Hostname mailcast-0.de.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-prod-eu "nc -w 5 -q0 %h %p"
+
+Host lb-int-0.de.people-doc.net
+  User rsircar
+  Hostname lb-int-0.de.people-doc.net
+  Port 22
+  ProxyCommand ssh rsircar@bastion-integ-prod-eu "nc -w 5 -q0 %h %p"

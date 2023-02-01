@@ -5,6 +5,21 @@ Self paced DevOps Book aimed to have atleast 12 topics, one each month.
 Like for January - Docker and AZ 700 Certificate
 For February - Ansible and DP-900 Certificate
 
+| Month | Tools | Add-on Tool|
+| ------------- | ------------- |
+| January | Docker | AZ-700|
+| February  | Ansible  | Ansible Tower |
+| March | TBD  | |
+| April  | TBD  | |
+| May | TBD  | |
+| June  | TBD  | |
+| July | TBD  | |
+| August  | TBD  | |
+| September | TBD  | |
+| October  | TBD | |
+| November | TBD  | |
+| December  | TBD  | |
+
 
 # Create a table for tools and category
 Like for, 
