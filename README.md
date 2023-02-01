@@ -21,6 +21,15 @@ For February - Ansible and DP-900 Certificate
 | December  | TBD  | |
 
 
+--
+
+| Left-aligned | Center-aligned | Right-aligned |
+| :---         |     :---:      |          ---: |
+| git status   | git status     | git status    |
+| git diff     | git diff       | git diff      |
+
+
+
 # Create a table for tools and category
 Like for, 
 Containerization - Docker  - Links
