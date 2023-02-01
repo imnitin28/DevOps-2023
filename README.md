@@ -1,51 +1,34 @@
 # DevOps-2023
 Self paced DevOps Book aimed to have atleast 12 topics, one each month.
 - Find in local system path: /home/knoldus/DevOps/DevOps-2023 (only for author)
-# Create a table with Month and targetted Tools #
-Like for January - Docker and AZ 700 Certificate
-For February - Ansible and DP-900 Certificate
 
-| Month     | Tools  | Add-on Tool   |
-| ----------| -------|---------------|
-| January   | Docker | AZ-700        |
-| February  | Ansible| Ansible Tower |
-| March     | TBD    |               |
-| April     | TBD    |               |
-| May       | TBD    |               |
-| June      | TBD    |               |
-| July      | TBD    |               |
-| August    | TBD    |               |
-| September | TBD    |               |
-| October   | TBD    |               |
-| November  | TBD    |               |    
-| December  | TBD    |               |
+# Roadmap
 
+| Month     | Tools      | Add-on Tool   |
+| ----------| -----------|---------------|
+| January   | Docker     | AZ-700        |
+| February  | Ansible    | Ansible Tower |
+| March     | TBD        |               |
+| April     | TBD        |               |
+| May       | TBD        |               |
+| June      | TBD        |               |
+| July      | TBD        |               |
+| August    | TBD        |               |
+| September | TBD        |               |
+| October   | TBD        |               |
+| November  | TBD        |               |
+| December  | TBD        |               |
 
---
+# Radar Topics
 
-| Left-aligned | Center-aligned | Right-aligned |
-| :---         |     :---:      |          ---: |
-| git status   | git status     | git status    |
-| git diff     | git diff       | git diff      |
-
-
-
-# Create a table for tools and category
-Like for, 
-Containerization - Docker  - Links
-Containaer Orchestration - Kubernetes   - Links
-Configuration Management - Ansible
-IaC - Terraform
-Cloud Provider - GCP
-Scripting - Shell/Python
-
-#### Tools preferebly used
-###### Scripting
-- Shell
-- Python3
-
-###### Cloud 
-- GCP
+| Category                | Tools       | Resource Link |
+| ------------------------| ------------|---------------|
+| Containerization        | Docker      |       -       |
+| Container Orchestration | Kubernetes  |       -       |
+| Configuration Management| Ansible     |       -       |
+| Infrastructure as Code  | Terraform   |       -       |
+| Cloud Provider          | GCP         |       -       |
+| Scripting               | Shell/Python|       -       |
 
 -------------------------------------------
 #### January
