@@ -16,6 +16,7 @@
 - Ansible Tower
 - GKE from acloudguru
 #### February
+```
 - K8s: 
     ```
     # Getting Started
@@ -56,6 +57,9 @@ Try to focus on WHY we should use K8s and not HOW (aleast not at this moment).*
 **Worth taking a look : Kubernetes The Big Picture[1000-Feet Above]**
  - https://www.infoworld.com/article/3173266/4-reasons-you-should-use-kubernetes.html
     ```
+```
+## Ansible 
+- Introdution: https://youtu.be/1id6ERvfozo
 - Terraform
 - Python Scripting
 #### March
@@ -86,4 +90,5 @@ Try to focus on WHY we should use K8s and not HOW (aleast not at this moment).*
 #### Certifications
 - GCP
 - Azure | AZ-104/305/700
+    - Done AZ 700 : 
 - Terraform
