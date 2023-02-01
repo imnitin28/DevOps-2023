@@ -10,7 +10,7 @@ Self paced DevOps Book aimed to have atleast 12 topics, one each month.
 | February  | Ansible    | Ansible Tower |
 | March     | Jenkins    | GKE(Gdrive)   |
 | April     | TBD        |               |
-| May       | TBD        |               |
+| May       | ELK Stack  |               |
 | June      | TBD        |               |
 | July      | TBD        |               |
 | August    | TBD        |               |
@@ -21,15 +21,16 @@ Self paced DevOps Book aimed to have atleast 12 topics, one each month.
 
 # Radar Topics
 
-| Category                | Tools       | Resource Link                         |
-| ------------------------| ------------|---------------------------------------|
-| Containerization        | Docker      |       -                               |
-| CICD                    | Jenkins     |       -                               |
-| Container Orchestration | Kubernetes  |       -                               |
-| Configuration Management| Ansible     | Link[https://youtu.be/1id6ERvfozo]    |
-| Infrastructure as Code  | Terraform   |       -                               |
-| Cloud Provider          | GCP         |       -                               |   
-| Scripting               | Shell/Python|       -                               |
+| Category                | Tools        | Resource Link                         |
+| ------------------------| -------------|---------------------------------------|
+| Containerization        | Docker       |       -                               |
+| CICD                    | Jenkins      |       -                               |
+| Container Orchestration | Kubernetes   |       -                               |
+| Configuration Management| Ansible      | Link[https://youtu.be/1id6ERvfozo]    |
+| Infrastructure as Code  | Terraform    |       -                               |
+| Cloud Provider          | GCP          |       -                               |   
+| Scripting               | Shell/Python |       -                               |
+| Monitoring and Logging  |Graf/Prome/ELK|                                       |
 
 -------------------------------------------
 # Kubernetes: 
@@ -73,10 +74,6 @@ Try to focus on WHY we should use K8s and not HOW (aleast not at this moment).*
  - https://www.infoworld.com/article/3173266/4-reasons-you-should-use-kubernetes.html
     ```
 ```
-## Terraform
-## Python Scripting
-
-# March
 - ELK stack
 
 # Tools needed for DevOps
