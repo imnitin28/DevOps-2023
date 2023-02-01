@@ -1,6 +1,20 @@
 # DevOps-2023
-12 months - 12 technologies - self paced
-- local path: /home/knoldus/DevOps/DevOps-2023
+Self paced DevOps Book aimed to have atleast 12 topics, one each month.
+- Find in local system path: /home/knoldus/DevOps/DevOps-2023 (only for author)
+# Create a table with Month and targetted Tools #
+Like for January - Docker and AZ 700 Certificate
+For February - Ansible and DP-900 Certificate
+
+
+# Create a table for tools and category
+Like for, 
+Containerization - Docker  - Links
+Containaer Orchestration - Kubernetes   - Links
+Configuration Management - Ansible
+IaC - Terraform
+Cloud Provider - GCP
+Scripting - Shell/Python
+
 #### Tools preferebly used
 ###### Scripting
 - Shell
@@ -60,9 +74,11 @@ Try to focus on WHY we should use K8s and not HOW (aleast not at this moment).*
 ```
 ## Ansible 
 - Introdution: https://youtu.be/1id6ERvfozo
-- Terraform
-- Python Scripting
-#### March
+
+## Terraform
+## Python Scripting
+
+# March
 - ELK stack
 
 # Tools needed for DevOps
