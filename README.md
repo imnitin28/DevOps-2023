@@ -8,7 +8,7 @@ Self paced DevOps Book aimed to have atleast 12 topics, one each month.
 | ----------| -----------|---------------|
 | January   | Docker     | AZ-700        |
 | February  | Ansible    | Ansible Tower |
-| March     | TBD        |               |
+| March     | Jenkins    | GKE(Gdrive)   |
 | April     | TBD        |               |
 | May       | TBD        |               |
 | June      | TBD        |               |
@@ -21,26 +21,20 @@ Self paced DevOps Book aimed to have atleast 12 topics, one each month.
 
 # Radar Topics
 
-| Category                | Tools       | Resource Link |
-| ------------------------| ------------|---------------|
-| Containerization        | Docker      |       -       |
-| Container Orchestration | Kubernetes  |       -       |
-| Configuration Management| Ansible     |       -       |
-| Infrastructure as Code  | Terraform   |       -       |
-| Cloud Provider          | GCP         |       -       |
-| Scripting               | Shell/Python|       -       |
+| Category                | Tools       | Resource Link                         |
+| ------------------------| ------------|---------------------------------------|
+| Containerization        | Docker      |       -                               |
+| CICD                    | Jenkins     |       -                               |
+| Container Orchestration | Kubernetes  |       -                               |
+| Configuration Management| Ansible     | Link[https://youtu.be/1id6ERvfozo]    |
+| Infrastructure as Code  | Terraform   |       -                               |
+| Cloud Provider          | GCP         |       -                               |   
+| Scripting               | Shell/Python|       -                               |
 
 -------------------------------------------
-#### January
-- Basics of DevOps
-- Docker
-- Ansible Tower
-- GKE from acloudguru
-#### February
+# Kubernetes: 
 ```
-- K8s: 
-    ```
-    # Getting Started
+##### Getting Started
 #### Focus: To get a high-level outline of Kubernetes.
 
 ## Why Kubernetes ? 
@@ -79,9 +73,6 @@ Try to focus on WHY we should use K8s and not HOW (aleast not at this moment).*
  - https://www.infoworld.com/article/3173266/4-reasons-you-should-use-kubernetes.html
     ```
 ```
-## Ansible 
-- Introdution: https://youtu.be/1id6ERvfozo
-
 ## Terraform
 ## Python Scripting
 
@@ -109,9 +100,3 @@ Try to focus on WHY we should use K8s and not HOW (aleast not at this moment).*
     - Prometheus
     - Grafana
     - ELK Stack
- 
-#### Certifications
-- GCP
-- Azure | AZ-104/305/700
-    - Done AZ 700 : 
-- Terraform
