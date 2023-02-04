@@ -1,63 +1,41 @@
 # DevOps-2023
 Self paced DevOps Book aimed to have atleast 12 topics, one each month.
 - Find in local system path: /home/knoldus/DevOps/DevOps-2023 (only for author)
-# Create a table with Month and targetted Tools #
-Like for January - Docker and AZ 700 Certificate
-For February - Ansible and DP-900 Certificate
 
-| Month | Tools | Add-on Tool|
-| ------------- | ------------- |
-| January | Docker | AZ-700|
-| February  | Ansible  | Ansible Tower |
-| March | TBD  | |
-| April  | TBD  | |
-| May | TBD  | |
-| June  | TBD  | |
-| July | TBD  | |
-| August  | TBD  | |
-| September | TBD  | |
-| October  | TBD | |
-| November | TBD  | |
-| December  | TBD  | |
+# Roadmap
 
+| Month     | Tools      | Add-on Tool   |
+| ----------| -----------|---------------|
+| January   | Docker     | AZ-700        |
+| February  | Ansible    | Ansible Tower |
+| March     | Jenkins    | GKE(Gdrive)   |
+| April     | TBD        |               |
+| May       | ELK Stack  |               |
+| June      | TBD        |               |
+| July      | TBD        |               |
+| August    | TBD        |               |
+| September | TBD        |               |
+| October   | TBD        |               |
+| November  | TBD        |               |
+| December  | TBD        |               |
 
---
+# Radar Topics
 
-| Left-aligned | Center-aligned | Right-aligned |
-| :---         |     :---:      |          ---: |
-| git status   | git status     | git status    |
-| git diff     | git diff       | git diff      |
-
-
-
-# Create a table for tools and category
-Like for, 
-Containerization - Docker  - Links
-Containaer Orchestration - Kubernetes   - Links
-Configuration Management - Ansible
-IaC - Terraform
-Cloud Provider - GCP
-Scripting - Shell/Python
-
-#### Tools preferebly used
-###### Scripting
-- Shell
-- Python3
-
-###### Cloud 
-- GCP
+| Category                | Tools        | Resource Link                         |
+| ------------------------| -------------|---------------------------------------|
+| Containerization        | Docker       |       -                               |
+| CICD                    | Jenkins      |       -                               |
+| Container Orchestration | Kubernetes   |       -                               |
+| Configuration Management| Ansible      | Link[https://youtu.be/1id6ERvfozo]    |
+| Infrastructure as Code  | Terraform    |       -                               |
+| Cloud Provider          | GCP          |       -                               |   
+| Scripting               | Shell/Python |       -                               |
+| Monitoring and Logging  |Graf/Prome/ELK|                                       |
 
 -------------------------------------------
-#### January
-- Basics of DevOps
-- Docker
-- Ansible Tower
-- GKE from acloudguru
-#### February
+# Kubernetes: 
 ```
-- K8s: 
-    ```
-    # Getting Started
+##### Getting Started
 #### Focus: To get a high-level outline of Kubernetes.
 
 ## Why Kubernetes ? 
@@ -96,13 +74,6 @@ Try to focus on WHY we should use K8s and not HOW (aleast not at this moment).*
  - https://www.infoworld.com/article/3173266/4-reasons-you-should-use-kubernetes.html
     ```
 ```
-## Ansible 
-- Introdution: https://youtu.be/1id6ERvfozo
-
-## Terraform
-## Python Scripting
-
-# March
 - ELK stack
 
 # Tools needed for DevOps
@@ -126,9 +97,3 @@ Try to focus on WHY we should use K8s and not HOW (aleast not at this moment).*
     - Prometheus
     - Grafana
     - ELK Stack
- 
-#### Certifications
-- GCP
-- Azure | AZ-104/305/700
-    - Done AZ 700 : 
-- Terraform
