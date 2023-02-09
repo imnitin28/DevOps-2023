@@ -28,3 +28,7 @@ Delivery -> code commit(merge to master) => moves to staging [with all possible 
 ```
 
 ![image](https://user-images.githubusercontent.com/76727343/217778446-0ea0898d-11e4-4e70-82d6-e8bc51f6fb1c.png)
+
+
+### References
+- https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment
