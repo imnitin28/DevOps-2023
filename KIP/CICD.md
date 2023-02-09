@@ -32,3 +32,4 @@ Delivery -> code commit(merge to master) => moves to staging [with all possible 
 
 ### References
 - https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment
+- https://www.youtube.com/watch?v=LNLKZ4Rvk8w
