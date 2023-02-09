@@ -1,4 +1,4 @@
-# CI CD
+# CI CD - Integration vs Delivery vs Deployment
 
 ```
 CI => Continuous Integration
