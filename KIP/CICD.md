@@ -2,13 +2,15 @@
 
 ```
 CI => Continuous Integration
-Continuosly integrate newly added code to the version control and trigger build[build artifacts to be deployed and push to artifact repository]
+Continuosly integrate newly added code to the version control and trigger build.
+[build artifacts to be deployed and push to artifact repository]
 ```
 ```
 CD => Continuous Delivery and Continuos Deployment
 ```
 ```
-For both, deployment and delivery, ultimate goal is to take new valuable code to production as quickly as possible.
+For both, deployment and delivery, ultimate goal is to take new valuable code to 
+production as quickly as possible.
 
 Production is from where business runs, profit generates.
 
