@@ -1,3 +1,4 @@
+# Done - Submitted for Techhub
 # Prerequisite
 ```
 Python3
@@ -24,3 +25,8 @@ Again take a pause of 5 seconds and resend request, it should give a response. <
 ![image](https://user-images.githubusercontent.com/76727343/216787908-3969fbed-e14a-4eb1-a174-751643f92cbd.png)
 </br>
 Idea is, within 5 seconds it can have at max 3 request, more than 3 would not be entertained. </br>
+
+
+Python rate limiter is an utility program to prevent the frequency of an operation from exceeding some defined constraint. At an enterprise level application rate limiter is commonly used to protect underlying services and resources.
+
+

@@ -1,20 +1,11 @@
-# Node Hello World
+# containerize web app, dockerize it and push to GCR
+- This techhub contains a simple web application, a Dockerfile which containerizes this and an script which pushes this image Google's container registry.
+- This techhub is useful for simple deployments to GCP from GCR.
 
-Simple node.js app that servers "hello world"
+# How to use?
+``` sh containerize-push-to-gcr.sh ```
 
-Great for testing simple deployments to the cloud
-
-## Create a .tgz file
-
-`npm pack`
-
-## Run It
-
-`npm start`
-
-### Ports Used:
-`http://localhost:3000
-http://localhost:3001`
+# index.js
+Simple node.js app that servers "Hello from Knoldus !" </br>
 
 
-## This repository contains a basic web application based on node.js. 
