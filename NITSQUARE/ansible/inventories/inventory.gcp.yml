@@ -1,0 +1,10 @@
+plugin: gcp_compute
+auth_kind: serviceaccount
+hostnames:
+- private_ip
+- name
+# keyed_groups:
+#   - prefix: gcp_failover
+#     key: labels.failover
+# groups:
+#   sftp_cluster: "'sftp-vm' in labels"

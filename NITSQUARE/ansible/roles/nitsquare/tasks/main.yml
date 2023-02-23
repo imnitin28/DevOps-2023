@@ -1,0 +1,6 @@
+---
+# tasks file for nitsquare
+- name: Pull image from gcr.io
+  docker_image:
+    name: gcr.io/$GCP_PROJECT/$IMAGE_NAME:$VERSION
+    source: pull

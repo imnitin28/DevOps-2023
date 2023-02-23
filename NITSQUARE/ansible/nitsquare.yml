@@ -1,0 +1,10 @@
+---
+- name: Configure GCP Compute Engine instances
+  hosts: compute-engine-instances
+  gather_facts: yes
+  vars:
+    gcp_project: d-astronaut-draft
+    gcp_credentials_file: ../terraform/d-astronaut-draft-bac3f050f907.json
+  roles:
+  - name: nitsquare
+
