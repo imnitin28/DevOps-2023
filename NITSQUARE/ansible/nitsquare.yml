@@ -7,4 +7,3 @@
     gcp_credentials_file: ../terraform/d-astronaut-draft-bac3f050f907.json
   roles:
   - name: nitsquare
-
