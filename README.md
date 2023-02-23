@@ -31,6 +31,7 @@ Self paced DevOps Book aimed to have atleast 12 topics, one each month.
 | Cloud Provider          | GCP          |       -                               |   
 | Scripting               | Shell/Python |       -                               |
 | Monitoring and Logging  |Graf/Prome/ELK|                                       |
+| Azure Cloud             |As per DCT doc|       -                               |
 
 -------------------------------------------
 # Kubernetes: 

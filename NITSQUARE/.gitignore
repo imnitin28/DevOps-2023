@@ -1,0 +1,32 @@
+roles/*.*
+*.retry
+.cache
+.installed_roles
+*.pyc
+vendor_roles/
+.venv
+.envrc
+
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+*.json
+*.terraform.lock.hcl
+# Crash log files
+crash.log
+
+# Ignore any .tfvars files that are generated automatically for each Terraform run. Most
+# .tfvars files are managed as part of configuration and so should be included in
+# version control.
+terraform.tfvars
+
+# Include override files you do wish to add to version control using negated pattern
+#
+# !example_override.tf
+
+# Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
+# example: *tfplan*
+d-astronaut-draft-bac3f050f907.json
