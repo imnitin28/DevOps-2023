@@ -1,0 +1,54 @@
+---
+# This file contains user to have access and ansible playbook to target
+users:
+  integration: &integration_users
+    execute:
+      - eliahrebstock  # Eliah Rebstock
+      - wsourdin   # William Sourdin
+      - imnitin28  # Nitin Mishra
+      - jathinkayakal # Jathin Kayakal
+      - EldarKZ16 # Eldar Albossyn
+      - rohan-sircar # Rohan Sircar
+  prod: &prod_users
+    execute:
+      - eliahrebstock  # Eliah Rebstock
+      - wsourdin   # William Sourdin
+      - imnitin28  # Nitin Mishra
+      - jathinkayakal # Jathin Kayakal
+      - EldarKZ16 # Eldar Albossyn
+      - rohan-sircar # Rohan Sircar
+    read:
+      - eliahrebstock  # Eliah Rebstock
+      - wsourdin   # William Sourdin
+      - imnitin28  # Nitin Mishra
+      - jathinkayakal # Jathin Kayakal
+      - EldarKZ16 # Eldar Albossyn
+      - rohan-sircar # Rohan Sircar
+envs:
+  inte-mia:
+    <<: *integration_users
+    version_override: true
+  qualif:
+    <<: *integration_users
+    execute:
+      - imnitin28
+    version_override: true
+  staging-eu: *integration_users
+  staging-us: *integration_users
+  prod-eu: *integration_users
+  prod-atl: *integration_users
+  prod-us: *integration_users
+  prod-tor: *integration_users
+    
+jobs:
+  - playbook: ansible/deploy.yml # test with this playbook, instead of ansible/blue-green-deployment.yml
+    inventory: "ansible/{{ deploy_env }}/inventory"
+    job_type: run
+    extra_vars_enabled: true
+   # version_override: true
+    
+  - playbook: ansible/blue-green-deployment.yml # test with this playbook, instead of ansible/deploy.yml
+    inventory: "ansible/{{ deploy_env }}/inventory"
+    job_type: run
+    extra_vars_enabled: true
+   # version_override: true

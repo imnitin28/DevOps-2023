@@ -1,0 +1,32 @@
+integration_users: &integration_users
+  execute:
+    - github_user_1
+    - github_user_2
+
+production_users: &production_users
+  execute:
+    - github_user_1
+
+envs:
+  inte-mia:
+    <<: *integration_users
+    read:
+      - github_user_3
+    version_override: true
+  qualif: *integration_users
+    <<: *integration_users
+    read:
+      - github_user_3
+    version: 3.5
+  staging-eu: *production_users
+  staging-us: *production_users
+  prod-eu: *production_users
+  prod-us: *production_users
+  prod-atl: *production_users
+  prod-tor: *production_users
+
+jobs:
+  - playbook: path/to/playbook.yml
+    inventory: 'ansible/inventories/{{ deploy_env }}/inventory'
+  - playbook: path/to/playbook2.yml
+    inventory: 'ansible/inventories/{{ deploy_env }}/inventory'
