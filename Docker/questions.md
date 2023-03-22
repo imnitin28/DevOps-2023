@@ -1,4 +1,21 @@
 ### Questions on Docker.
+- Traditional vs. New-Generation Virtualization or simply Virtualizations vs Containerization or simply VMs vs Containers?
+    - Earlier, we used to create virtual machines, and each VM had an OS which took a lot of space and made it heavy.
+    - Now in docker container’s case, you have a single OS, and the resources are shared between the containers. Hence it is lightweight and boots in seconds.
+
+- What type of arhitecture docker have?
+    - client-server
+    - docker info command
+
+- What is a registry in terms of docker? Name a registry.
+    - dockerhub
+
+- what happens when you do docker pull? docker run?
+- check docker service status.
+- docker engine, dockerd, containerd, runc, docker-init. What are they all? 
+- what are cgroups?
+- 
+
 Q. What are microservices? Why do we need it? Adv and Disadvantages. </br>
 Q. Why do we need docker? What are the usecases?</br>
 Q. How to check docker status?</br>
