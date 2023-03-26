@@ -14,6 +14,9 @@ docker rm --force `docker ps -qa`
 docker rmi --force `docker images -aq`
 docker volume prune
 ```
+## Q. Consider a scenario, where we have a container running with name webserver. We want to create another container with same name but without stopping/removing previous container. We can change name of existing container. But new one should have name webserver only.
+![image](https://user-images.githubusercontent.com/76727343/227763288-e6e75cd0-85c2-433a-b4e6-89c50345ee52.png)
+
 
 ## Q. Difference between docker run, docker start, and docker create.
 
@@ -40,7 +43,6 @@ docker exec -it <container_id> /bin/bash # If the container is running but nginx
 
 check nginx configuration files at /etc/nginx
 
-
-
 At the end if nothing works, restarting the container or rebuilding the image
 ```
+## Q. 
