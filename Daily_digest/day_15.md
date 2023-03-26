@@ -46,3 +46,6 @@ check nginx configuration files at /etc/nginx
 At the end if nothing works, restarting the container or rebuilding the image
 ```
 ## Q. 
+- docker stat command
+- docker top command
+- 
