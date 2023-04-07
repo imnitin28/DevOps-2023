@@ -27,7 +27,7 @@ openssl x509 -in knol.dev.crt -text -out knol.dev.pem
 ![image](https://user-images.githubusercontent.com/76727343/230678189-2bb1ffc3-8ff8-4cf0-b5c8-7c4a7dc8e375.png)
 ----
 Here's what each option in the command means:
-"x509" tells OpenSSL to treat the input file as an X.509 certificate.
-"-in knol.dev.crt" specifies the input file as "knol.dev.crt".
-"-text" tells OpenSSL to print out the certificate in human-readable text format.
-"-out knol.dev.pem" specifies the output file as "knol.dev.pem" and tells OpenSSL to write the certificate to this file in PEM format.
+- "x509" tells OpenSSL to treat the input file as an X.509 certificate.
+- "-in knol.dev.crt" specifies the input file as "knol.dev.crt".
+- "-text" tells OpenSSL to print out the certificate in human-readable text format.
+- "-out knol.dev.pem" specifies the output file as "knol.dev.pem" and tells OpenSSL to write the certificate to this file in PEM format.
