@@ -1,0 +1,4 @@
+abc trainee devops 12000
+cde trainee devops 25000
+efg manager devops 50000
+ijk manager account 47000

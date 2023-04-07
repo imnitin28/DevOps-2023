@@ -1,0 +1,3 @@
+GREP is a multi-purpose file search tool that uses Regular Expressions.
+The grep command is used for searching the text from the file according to the regular expression.
+grep is a powerful file pattern searcher in Linux.

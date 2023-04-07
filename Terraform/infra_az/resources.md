@@ -1,0 +1,2 @@
+- install az cloud
+- az login
