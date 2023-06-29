@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Set the Common Name for the CA certificate
+echo "Enter certificate name"
+read name
+COMMON_NAME=${name}
+
+# Generate a private key for the CA
+openssl genrsa -out ca.key 4096
+
+# Create a Certificate Signing Request (CSR) for the CA
+openssl req -new -key ca.key -out ca.csr -subj "/CN=${COMMON_NAME}"
+
+# Generate the CA certificate using the CSR and private key
+openssl x509 -req -days 3650 -in ca.csr -signkey ca.key -out ca.crt
+
+# Cleanup the CSR
+rm ca.csr
+
+# Output the generated CA certificate
+cat ca.crt
+

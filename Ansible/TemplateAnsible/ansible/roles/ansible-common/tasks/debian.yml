@@ -1,0 +1,20 @@
+---
+# - name: remove obselete packages
+#   apt:
+#     clean: yes
+
+- name: install nginx
+  yum:
+    name: nginx
+    state: latest
+- name: start nginx
+  service:
+    name: nginx
+    state: started
+# clean not available in ansible 2.9, good to use autoclean or shell module for verion<2.13
+- name: Clean apt cache with shell
+  shell: apt clean
+
+- name: Remove obsolete packages from the cache
+  command: apt clean
+  changed_when: true

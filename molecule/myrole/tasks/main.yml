@@ -1,0 +1,17 @@
+---
+# tasks file for myrole
+- name: Test playbook
+  hosts: all
+  gather_facts: yes
+
+  tasks:
+    - name: Ensure that the 'ntp' package is installed
+      package:
+        name: ntp
+        state: present
+
+    - name: Ensure that the 'ntp' service is running
+      service:
+        name: ntp
+        state: started
+        enabled: yes

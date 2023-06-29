@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-first-deploy
+spec:
+  selector:
+    matchLabels:
+      app: my-first-deploy
+  template:
+    metadata:
+      labels:
+        app: my-first-deploy
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80

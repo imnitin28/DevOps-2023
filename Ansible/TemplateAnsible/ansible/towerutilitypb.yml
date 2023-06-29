@@ -1,0 +1,11 @@
+- hosts: localhost
+  become: yes
+
+  tasks:
+  - name: install git-crypt binary
+    command: apt-get install -y git-crypt
+
+  - name: unlock encrypted files
+    command: date
+
+- import_playbook: importrole.yml
