@@ -12,7 +12,8 @@ and easily enable communication between multiple services within application.
 
 
 # Architecture
-<image>
+![image](https://github.com/imnitin28/DevOps-2023/assets/76727343/86eb13f2-ca47-452c-9ead-25cedfe3c7c5)
+
 
 1. ETCD 
     - etcd is a distributed reliable key-value store that is Simple, Secure and Fast.
