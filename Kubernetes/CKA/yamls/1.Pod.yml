@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: panda-pod
+  labels:
+    app: panda
+    type: kodekloud
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx

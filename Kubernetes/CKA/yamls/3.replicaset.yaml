@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: panda-rs
+  labels:
+    name: panda
+    type: kodekloud
+spec:
+  template:
+    metadata:
+      name: panda-pod
+      labels:
+        app: panda
+        type: kodekloud
+    spec:
+      containers:
+      - name: nginx-container
+        image: nginx
+
+  selector: 
+    matchLabels:
+      type: kodekloud
+  replicas: 2

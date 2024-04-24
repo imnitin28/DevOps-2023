@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: panda-deploy
+  labels:
+    app: panda
+    type: kodekloud
+
+spec:
+  template:
+    metadata:
+      name: panda-pod
+      labels:
+        app: panda
+        type: kodekloud
+    spec:
+      containers:
+      - image: nginx
+        name: nginx-container
+  selector: 
+    matchLabels:
+      type: kodekloud
+  replicas: 3

@@ -1,0 +1,56 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-busybox-deployment
+spec:
+  replicas: 3   # Adjust the number of replicas as per your requirement
+  selector:
+    matchLabels:
+      app: nginx-busybox
+  template:
+    metadata:
+      labels:
+        app: nginx-busybox
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80
+          protocol: TCP
+        resources:
+          requests:
+            cpu: 100m   # Request 100 milli CPUs
+            memory: 128Mi   # Request 128 Mebibytes of memory
+          limits:
+            cpu: 200m   # Limit to 200 milli CPUs
+            memory: 256Mi   # Limit to 256 Mebibytes of memory
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 15
+          periodSeconds: 10
+      - name: busybox
+        image: busybox:latest
+        command: ["/bin/sh", "-c", "while true; do echo 'Hello, from Busybox'; sleep 3600; done"]
+        resources:
+          requests:
+            cpu: 50m   # Request 50 milli CPUs
+            memory: 64Mi   # Request 64 Mebibytes of memory
+          limits:
+            cpu: 100m   # Limit to 100 milli CPUs
+            memory: 128Mi   # Limit to 128 Mebibytes of memory
+        livenessProbe:
+          exec:
+            command:
+            - cat
+            - /tmp/healthy
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        volumeMounts:
+        - name: shared-data
+          mountPath: /tmp
+      volumes:
+      - name: shared-data
+        emptyDir: {}

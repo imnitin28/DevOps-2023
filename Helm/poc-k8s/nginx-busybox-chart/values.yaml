@@ -1,0 +1,24 @@
+replicaCount: 3
+
+nginx:
+  image: nginx:latest
+  resources:
+    requests:
+      cpu: 100m   # Request 100 milli CPUs
+      memory: 128Mi   # Request 128 Mebibytes of memory
+    limits:
+      cpu: 200m   # Limit to 200 milli CPUs
+      memory: 256Mi   # Limit to 256 Mebibytes of memory
+
+busybox:
+  image: busybox:latest
+  resources:
+    requests:
+      cpu: 50m   # Request 50 milli CPUs
+      memory: 64Mi   # Request 64 Mebibytes of memory
+    limits:
+      cpu: 100m   # Limit to 100 milli CPUs
+      memory: 128Mi   # Limit to 128 Mebibytes of memory
+
+test:
+  enabled: false   # Whether to enable Helm tests or not

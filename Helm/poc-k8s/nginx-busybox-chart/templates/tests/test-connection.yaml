@@ -1,0 +1,20 @@
+{{- if .Values.test.enabled -}}
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "nginx-busybox-chart.fullname" . }}-test"
+  labels:
+    app: "{{ include "nginx-busybox-chart.name" . }}"
+    chart: "{{ include "nginx-busybox-chart.chart" . }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+spec:
+  containers:
+  - name: test
+    image: busybox:latest
+    command:
+      - "/bin/sh"
+      - "-c"
+      - "wget -qO- {{ .Values.service.url }}:{{ .Values.service.port }}"
+  restartPolicy: Never
+{{- end -}}

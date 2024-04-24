@@ -15,6 +15,19 @@ and easily enable communication between multiple services within application.
 ![image](https://github.com/imnitin28/DevOps-2023/assets/76727343/86eb13f2-ca47-452c-9ead-25cedfe3c7c5)
 
 
+00. Master Node / Control Plane
+- etcd
+- Kube API Server
+- Controller Manager
+- Scheduler
+
+01. Worker Node 
+- kubelet
+- kube proxy
+- Container Runtime
+
+# Master Node / Control Plane
+
 1. ETCD 
     - etcd is a distributed reliable key-value store that is Simple, Secure and Fast.
 
@@ -53,5 +66,16 @@ and easily enable communication between multiple services within application.
 
     - 
 
+3. Kube Controller Manager
+Controllers are brain behind working of K8s. They manages the state of the K8s Object based on spec details for desired state of the object.
+- Replication Controller
 
+4. Kube Scheduler
 
+# Worker Node
+
+1. Kubelet
+
+2. Kube Proxy
+
+3. Container Runtime

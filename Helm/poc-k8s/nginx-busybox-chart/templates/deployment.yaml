@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "nginx-busybox-chart.fullname" . }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ include "nginx-busybox-chart.name" . }}
+      release: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ include "nginx-busybox-chart.name" . }}
+        release: {{ .Release.Name }}
+    spec:
+      containers:
+      - name: nginx
+        image: {{ .Values.nginx.image }}
+        ports:
+        - containerPort: 80
+          protocol: TCP
+        resources:
+          {{ toYaml .Values.nginx.resources | nindent 12 }}
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 15
+          periodSeconds: 10
+      - name: busybox
+        image: {{ .Values.busybox.image }}
+        command: ["/bin/sh", "-c", "while true; do echo 'Hello, from Busybox'; sleep 3600; done"]
+        resources:
+          {{ toYaml .Values.busybox.resources | nindent 12 }}
+        livenessProbe:
+          exec:
+            command:
+            - cat
+            - /tmp/healthy
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        volumeMounts:
+        - name: shared-data
+          mountPath: /tmp
+      volumes:
+      - name: shared-data
+        emptyDir: {}
