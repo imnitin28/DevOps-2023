@@ -9,3 +9,11 @@ spec:
   containers:
     - name: nginx-container
       image: nginx
+  nodeName: controlplane # schdule this Pod on this Node
+
+  tolerations:
+  - key: "app"
+    operator: "Equal"
+    value: "blue"
+    effect: "NoSchedule"
+    
