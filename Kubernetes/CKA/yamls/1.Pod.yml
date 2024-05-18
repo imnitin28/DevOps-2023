@@ -9,8 +9,14 @@ spec:
   containers:
     - name: nginx-container
       image: nginx
+      resources:
+        request:
+          memory: "1Gi"
+          cpu: 1
+        limits:
+          memory: "2Gi"
+          cpu: 2
   nodeName: controlplane # schdule this Pod on this Node
-
   tolerations:
   - key: "app"
     operator: "Equal"
