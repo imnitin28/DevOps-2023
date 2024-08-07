@@ -1,0 +1,21 @@
+---
+- name: No block rescue
+  hosts: localhost
+  gather_facts: false
+
+  tasks:
+    - name: Print a message
+      ansible.builtin.debug:
+        msg: 'I execute normally'
+      
+    - name: Fail this task on purpose
+      ansible.builtin.fail:
+        msg: 'this task will Fail'
+
+    - name: Never print this
+      ansible.builtin.debug:
+        msg: 'I never execute, due to above tasks failing'
+
+    - name: Print when errors
+      ansible.builtin.debug:
+        msg: 'Caught an error, put fix codes here'

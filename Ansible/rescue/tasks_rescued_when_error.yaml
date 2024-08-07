@@ -1,0 +1,28 @@
+---
+- name: block rescue playbook
+  hosts: localhost
+  gather_facts: false
+
+  tasks:
+    - name: Handle the error
+      block:
+        - name: Print a message
+          ansible.builtin.debug:
+            msg: 'This taks executes normally'
+      
+        - name: Failing this task intentionaly
+          ansible.builtin.fail:
+            msg: 'Failing .........'
+
+        - name: Never executing this task'
+          ansible.builtin.debug:
+            msg: 'This never executed, due to above task failing'
+
+      rescue:
+        - name: Runs when some task fails in above block
+          ansible.builtin.debug:
+            msg: 'Caught an error, put fix codes here'
+    
+    - name: task outside block and rescue
+      ansible.builtin.debug:
+        msg: 'playbook continued even after error - after rescue'
