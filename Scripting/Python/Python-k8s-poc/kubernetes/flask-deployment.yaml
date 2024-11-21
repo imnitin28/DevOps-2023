@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-app-3
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flask-app-3
+  template:
+    metadata:
+      labels:
+        app: flask-app-3
+    spec:
+      containers:
+        - name: flask-app-3
+          image: imnitin28/pythonapp:latest # Replace with your Docker image
+          ports:
+            - containerPort: 5000
+          env:
+            - name: FLASK_ENV
+              value: development
+            - name: DB_PATH  # Setting the DB path environment variable
+              value: "/app/users.db"
+          volumeMounts:
+            - mountPath: "/app/users.db"
+              name: sqlite-storage
+              subPath: "users.db"
+      volumes:
+        - name: sqlite-storage
+          persistentVolumeClaim:
+            claimName: sqlite-pvc-3

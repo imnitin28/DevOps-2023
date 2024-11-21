@@ -1,0 +1,13 @@
+version: '3'
+services:
+  flask-app:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - users-data:/app  # Mount the entire app directory
+    environment:
+      - FLASK_ENV=development
+
+volumes:
+  users-data:
